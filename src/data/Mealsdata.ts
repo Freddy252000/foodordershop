@@ -369,10 +369,8 @@ const Mealsdata = [
           description:
             'Aromatic basmati rice cooked with tender chicken, Indian spices, and herbs, served with raita and curry.',
           roasted: 'Dum Cooked',
-          imagelink_square:
-            '../assets/meals_assets/biriyani/square/chicken_biriyani_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/biriyani/portrait/chicken_biriyani_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Chicken_Biriyani/Chicken_Biriyani_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Chicken_Biriyani/Chicken_Biriyani_pro.jpg'),
           ingredients: 'Chicken, Basmati Rice, Spices',
           special_ingredient: 'Saffron',
           prices: [
@@ -391,10 +389,8 @@ const Mealsdata = [
           description:
             'Fragrant basmati rice cooked with succulent mutton pieces, aromatic spices, and served with sides.',
           roasted: 'Dum Cooked',
-          imagelink_square:
-            '../assets/meals_assets/biriyani/square/mutton_biriyani_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/biriyani/portrait/mutton_biriyani_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Mutton_Biriyani/Mutton_Biriyani_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Mutton_Biriyani/Mutton_Biriyani_pro.jpg'),
           ingredients: 'Mutton, Basmati Rice, Spices',
           special_ingredient: 'Mint',
           prices: [
@@ -413,10 +409,8 @@ const Mealsdata = [
           description:
             'Aromatic rice cooked with a variety of fresh vegetables and spices, served with raita and curry.',
           roasted: 'Dum Cooked',
-          imagelink_square:
-            '../assets/meals_assets/biriyani/square/veg_biriyani_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/biriyani/portrait/veg_biriyani_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Vegetable_Biriyani/Vegetable_Biriyani_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Vegetable_Biriyani/Vegetable_Biriyani_pro.jpg'),
           ingredients: 'Mixed Vegetables, Basmati Rice, Spices',
           special_ingredient: 'Saffron',
           prices: [
@@ -435,10 +429,8 @@ const Mealsdata = [
           description:
             'Basmati rice cooked with succulent prawns, spices, and herbs, served with sides.',
           roasted: 'Dum Cooked',
-          imagelink_square:
-            '../assets/meals_assets/biriyani/square/prawn_biriyani_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/biriyani/portrait/prawn_biriyani_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Prawn_Biriyani/Prawn_Biriyani_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Prawn_Biriyani/Prawn_Biriyani_pro.jpg'),
           ingredients: 'Prawns, Basmati Rice, Spices',
           special_ingredient: 'Coriander',
           prices: [
@@ -459,10 +451,8 @@ const Mealsdata = [
           description:
             'Soft and fluffy Indian flatbread topped with butter, perfect for pairing with curries.',
           roasted: 'Tandoor Roasted',
-          imagelink_square:
-            '../assets/meals_assets/naan/square/butter_naan_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/naan/portrait/butter_naan_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Butter_Naan/Butter_Naan_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Butter_Naan/Butter_Naan_pro.jpg'),
           ingredients: 'Flour, Butter',
           special_ingredient: 'Tandoori Butter',
           prices: [
@@ -481,10 +471,8 @@ const Mealsdata = [
           description:
             'Soft naan bread infused with garlic, served hot with a crispy texture.',
           roasted: 'Tandoor Roasted',
-          imagelink_square:
-            '../assets/meals_assets/naan/square/garlic_naan_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/naan/portrait/garlic_naan_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/GarlicNaan/GarlicNaan_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/GarlicNaan/GarlicNaan_pro.jpg'),
           ingredients: 'Flour, Garlic, Butter',
           special_ingredient: 'Tandoori Garlic Butter',
           prices: [
@@ -503,10 +491,8 @@ const Mealsdata = [
           description:
             'Soft, unleavened flatbread made from whole wheat flour, commonly eaten with curries.',
           roasted: 'Pan Roasted',
-          imagelink_square:
-            '../assets/meals_assets/chapathi/square/plain_chapathi_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/chapathi/portrait/plain_chapathi_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/Plain_Chapathi/Plain_Chapathi_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/Plain_Chapathi/Plain_Chapathi_pro.jpg'),
           ingredients: 'Whole Wheat Flour',
           special_ingredient: 'None',
           prices: [
@@ -527,10 +513,8 @@ const Mealsdata = [
           description:
             'Popular Sri Lankan street food made with chopped roti, vegetables, and spiced chicken.',
           roasted: 'Pan Cooked',
-          imagelink_square:
-            '../assets/meals_assets/kottu/square/chicken_kottu_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/kottu/portrait/chicken_kottu_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/CheeseKottu/Chicken_Kottu_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/CheeseKottu/Chicken_Kottu_pro.jpg'),
           ingredients: 'Roti, Chicken, Vegetables',
           special_ingredient: 'Sri Lankan Spices',
           prices: [
@@ -549,10 +533,8 @@ const Mealsdata = [
           description:
             'Chopped roti stir-fried with vegetables, spiced beef, and flavorful spices.',
           roasted: 'Pan Cooked',
-          imagelink_square:
-            '../assets/meals_assets/kottu/square/beef_kottu_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/kottu/portrait/beef_kottu_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/BeefKottu/BeefKottu_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals/BeefKottu/BeefKottu_pro.jpg'),
           ingredients: 'Roti, Beef, Vegetables',
           special_ingredient: 'Sri Lankan Spices',
           prices: [
@@ -571,10 +553,8 @@ const Mealsdata = [
           description:
             'Chopped roti stir-fried with fresh vegetables, spices, and herbs.',
           roasted: 'Pan Cooked',
-          imagelink_square:
-            '../assets/meals_assets/kottu/square/veg_kottu_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/kottu/portrait/veg_kottu_pic_1_portrait.png',
+          imagelink_square: require('../assets/meals_assets/Meals/VegetableKottu/VegetableKottu_squ.jpg'),
+          imagelink_portrait: require('../assets/meals_assets/Meals//VegetableKottu/VegetableKottu_pro.jpg'),
           ingredients: 'Roti, Vegetables, Spices',
           special_ingredient: 'Curry Leaves',
           prices: [
@@ -587,376 +567,376 @@ const Mealsdata = [
           type: 'Meal',
           index: 2,
         },
-        {
-          id: 'K4',
-          name: 'Cheese Kottu',
-          description:
-            'A creamy blend of roti, cheese, vegetables, and a variety of spices for a unique flavor.',
-          roasted: 'Pan Cooked',
-          imagelink_square:
-            '../assets/meals_assets/kottu/square/cheese_kottu_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/kottu/portrait/cheese_kottu_pic_1_portrait.png',
-          ingredients: 'Roti, Cheese, Vegetables',
-          special_ingredient: 'Cheddar Cheese',
-          prices: [
-            {size: 'Regular', price: '550.00', currency: 'LKR'},
-            {size: 'Large', price: '750.00', currency: 'LKR'},
-          ],
-          average_rating: 4.6,
-          ratings_count: '5,900',
-          favourite: false,
-          type: 'Meal',
-          index: 3,
-        },
-      ],
-      Soups: [
-        {
-          id: 'S1',
-          name: 'Tom Yum Soup',
-          description:
-            'A hot and sour Thai soup made with fragrant herbs, shrimp, and vegetables.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/soup/square/tom_yum_soup_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/soup/portrait/tom_yum_soup_pic_1_portrait.png',
-          ingredients: 'Shrimp, Lemongrass, Chili',
-          special_ingredient: 'Galangal',
-          prices: [{size: 'Regular', price: '350.00', currency: 'LKR'}],
-          average_rating: 4.9,
-          ratings_count: '3,450',
-          favourite: false,
-          type: 'Meal',
-          index: 0,
-        },
-        {
-          id: 'S2',
-          name: 'Chicken Corn Soup',
-          description:
-            'A light soup made with chicken, sweet corn, and flavorful broth.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/soup/square/chicken_corn_soup_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/soup/portrait/chicken_corn_soup_pic_1_portrait.png',
-          ingredients: 'Chicken, Corn, Broth',
-          special_ingredient: 'Ginger',
-          prices: [{size: 'Regular', price: '300.00', currency: 'LKR'}],
-          average_rating: 4.8,
-          ratings_count: '2,930',
-          favourite: true,
-          type: 'Meal',
-          index: 1,
-        },
-        {
-          id: 'S3',
-          name: 'Vegetable Soup',
-          description:
-            'A warm, hearty soup made with mixed vegetables and flavorful broth.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/soup/square/veg_soup_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/soup/portrait/veg_soup_pic_1_portrait.png',
-          ingredients: 'Carrots, Potatoes, Broth',
-          special_ingredient: 'Coriander',
-          prices: [{size: 'Regular', price: '250.00', currency: 'LKR'}],
-          average_rating: 4.5,
-          ratings_count: '1,870',
-          favourite: false,
-          type: 'Meal',
-          index: 2,
-        },
-        {
-          id: 'S4',
-          name: 'Cream of Mushroom Soup',
-          description:
-            'A rich, creamy soup made with fresh mushrooms and herbs.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/soup/square/cream_of_mushroom_soup_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/soup/portrait/cream_of_mushroom_soup_pic_1_portrait.png',
-          ingredients: 'Mushrooms, Cream, Herbs',
-          special_ingredient: 'Thyme',
-          prices: [{size: 'Regular', price: '380.00', currency: 'LKR'}],
-          average_rating: 4.7,
-          ratings_count: '3,300',
-          favourite: false,
-          type: 'Meal',
-          index: 3,
-        },
-      ],
-      'Noodles & Mee Goreng': [
-        {
-          id: 'N1',
-          name: 'Chicken Mee Goreng',
-          description:
-            'A spicy, flavorful Indonesian noodle dish stir-fried with chicken, vegetables, and a mix of sauces.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/noodles/square/chicken_mee_goreng_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/noodles/portrait/chicken_mee_goreng_pic_1_portrait.png',
-          ingredients: 'Noodles, Chicken, Vegetables',
-          special_ingredient: 'Sweet Soy Sauce',
-          prices: [
-            {size: 'Regular', price: '450.00', currency: 'LKR'},
-            {size: 'Large', price: '650.00', currency: 'LKR'},
-          ],
-          average_rating: 4.7,
-          ratings_count: '5,320',
-          favourite: true,
-          type: 'Meal',
-          index: 0,
-        },
-        {
-          id: 'N2',
-          name: 'Seafood Mee Goreng',
-          description:
-            'Indonesian-style stir-fried noodles with mixed seafood, vegetables, and flavorful sauces.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/noodles/square/seafood_mee_goreng_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/noodles/portrait/seafood_mee_goreng_pic_1_portrait.png',
-          ingredients: 'Noodles, Seafood, Vegetables',
-          special_ingredient: 'Chili Sauce',
-          prices: [
-            {size: 'Regular', price: '550.00', currency: 'LKR'},
-            {size: 'Large', price: '750.00', currency: 'LKR'},
-          ],
-          average_rating: 4.8,
-          ratings_count: '4,700',
-          favourite: false,
-          type: 'Meal',
-          index: 1,
-        },
-        {
-          id: 'N3',
-          name: 'Vegetable Mee Goreng',
-          description:
-            'A vegetarian version of Mee Goreng with stir-fried noodles, vegetables, and Indonesian spices.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/noodles/square/veg_mee_goreng_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/noodles/portrait/veg_mee_goreng_pic_1_portrait.png',
-          ingredients: 'Noodles, Vegetables',
-          special_ingredient: 'Sweet Soy Sauce',
-          prices: [
-            {size: 'Regular', price: '400.00', currency: 'LKR'},
-            {size: 'Large', price: '600.00', currency: 'LKR'},
-          ],
-          average_rating: 4.6,
-          ratings_count: '3,950',
-          favourite: true,
-          type: 'Meal',
-          index: 2,
-        },
-        {
-          id: 'N4',
-          name: 'Beef Mee Goreng',
-          description:
-            'Stir-fried Indonesian-style noodles with beef, vegetables, and a mix of sweet and spicy sauces.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/noodles/square/beef_mee_goreng_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/noodles/portrait/beef_mee_goreng_pic_1_portrait.png',
-          ingredients: 'Noodles, Beef, Vegetables',
-          special_ingredient: 'Chili Paste',
-          prices: [
-            {size: 'Regular', price: '500.00', currency: 'LKR'},
-            {size: 'Large', price: '700.00', currency: 'LKR'},
-          ],
-          average_rating: 4.7,
-          ratings_count: '4,300',
-          favourite: false,
-          type: 'Meal',
-          index: 3,
-        },
-      ],
-      'Fried Rice': [
-        {
-          id: 'F1',
-          name: 'Chicken Fried Rice',
-          description:
-            'Fluffy rice stir-fried with chicken, eggs, and vegetables, seasoned with soy sauce and spices.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/fried_rice/square/chicken_fried_rice_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/fried_rice/portrait/chicken_fried_rice_pic_1_portrait.png',
-          ingredients: 'Rice, Chicken, Eggs, Vegetables',
-          special_ingredient: 'Soy Sauce',
-          prices: [
-            {size: 'Regular', price: '450.00', currency: 'LKR'},
-            {size: 'Large', price: '650.00', currency: 'LKR'},
-          ],
-          average_rating: 4.8,
-          ratings_count: '6,210',
-          favourite: true,
-          type: 'Meal',
-          index: 0,
-        },
-        {
-          id: 'F2',
-          name: 'Seafood Fried Rice',
-          description:
-            'Rice stir-fried with mixed seafood, vegetables, and a combination of spices and sauces.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/fried_rice/square/seafood_fried_rice_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/fried_rice/portrait/seafood_fried_rice_pic_1_portrait.png',
-          ingredients: 'Rice, Seafood, Vegetables',
-          special_ingredient: 'Oyster Sauce',
-          prices: [
-            {size: 'Regular', price: '550.00', currency: 'LKR'},
-            {size: 'Large', price: '750.00', currency: 'LKR'},
-          ],
-          average_rating: 4.7,
-          ratings_count: '5,710',
-          favourite: false,
-          type: 'Meal',
-          index: 1,
-        },
-        {
-          id: 'F3',
-          name: 'Vegetable Fried Rice',
-          description:
-            'Rice stir-fried with mixed vegetables, soy sauce, and spices for a flavorful vegetarian option.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/fried_rice/square/veg_fried_rice_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/fried_rice/portrait/veg_fried_rice_pic_1_portrait.png',
-          ingredients: 'Rice, Vegetables',
-          special_ingredient: 'Soy Sauce',
-          prices: [
-            {size: 'Regular', price: '400.00', currency: 'LKR'},
-            {size: 'Large', price: '600.00', currency: 'LKR'},
-          ],
-          average_rating: 4.5,
-          ratings_count: '4,800',
-          favourite: true,
-          type: 'Meal',
-          index: 2,
-        },
-        {
-          id: 'F4',
-          name: 'Egg Fried Rice',
-          description:
-            'Classic fried rice made with eggs, vegetables, and soy sauce, providing a simple yet tasty dish.',
-          roasted: 'Stir-fried',
-          imagelink_square:
-            '../assets/meals_assets/fried_rice/square/egg_fried_rice_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/fried_rice/portrait/egg_fried_rice_pic_1_portrait.png',
-          ingredients: 'Rice, Eggs, Vegetables',
-          special_ingredient: 'Soy Sauce',
-          prices: [
-            {size: 'Regular', price: '350.00', currency: 'LKR'},
-            {size: 'Large', price: '550.00', currency: 'LKR'},
-          ],
-          average_rating: 4.6,
-          ratings_count: '3,710',
-          favourite: false,
-          type: 'Meal',
-          index: 3,
-        },
-      ],
-      'Rice & Curry': [
-        {
-          id: 'RC1',
-          name: 'Chicken Rice & Curry',
-          description:
-            'Steamed rice served with a spicy chicken curry and a selection of vegetable sides.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/rice_curry/square/chicken_rice_curry_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/rice_curry/portrait/chicken_rice_curry_pic_1_portrait.png',
-          ingredients: 'Rice, Chicken, Spices, Vegetables',
-          special_ingredient: 'Curry Leaves',
-          prices: [
-            {size: 'Regular', price: '500.00', currency: 'LKR'},
-            {size: 'Large', price: '700.00', currency: 'LKR'},
-          ],
-          average_rating: 4.7,
-          ratings_count: '6,100',
-          favourite: true,
-          type: 'Meal',
-          index: 0,
-        },
-        {
-          id: 'RC2',
-          name: 'Fish Rice & Curry',
-          description:
-            'Steamed rice served with a flavorful fish curry, complemented with vegetable side dishes.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/rice_curry/square/fish_rice_curry_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/rice_curry/portrait/fish_rice_curry_pic_1_portrait.png',
-          ingredients: 'Rice, Fish, Spices, Vegetables',
-          special_ingredient: 'Fenugreek',
-          prices: [
-            {size: 'Regular', price: '600.00', currency: 'LKR'},
-            {size: 'Large', price: '800.00', currency: 'LKR'},
-          ],
-          average_rating: 4.6,
-          ratings_count: '5,200',
-          favourite: false,
-          type: 'Meal',
-          index: 1,
-        },
-        {
-          id: 'RC3',
-          name: 'Vegetable Rice & Curry',
-          description:
-            'Steamed rice served with a variety of vegetable curries and side dishes.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/rice_curry/square/veg_rice_curry_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/rice_curry/portrait/veg_rice_curry_pic_1_portrait.png',
-          ingredients: 'Rice, Vegetables, Spices',
-          special_ingredient: 'Coconut Milk',
-          prices: [
-            {size: 'Regular', price: '450.00', currency: 'LKR'},
-            {size: 'Large', price: '650.00', currency: 'LKR'},
-          ],
-          average_rating: 4.5,
-          ratings_count: '4,900',
-          favourite: true,
-          type: 'Meal',
-          index: 2,
-        },
-        {
-          id: 'RC4',
-          name: 'Beef Rice & Curry',
-          description:
-            'Steamed rice served with a tender beef curry and a variety of vegetable side dishes.',
-          roasted: 'Simmered',
-          imagelink_square:
-            '../assets/meals_assets/rice_curry/square/beef_rice_curry_pic_1_square.png',
-          imagelink_portrait:
-            '../assets/meals_assets/rice_curry/portrait/beef_rice_curry_pic_1_portrait.png',
-          ingredients: 'Rice, Beef, Spices, Vegetables',
-          special_ingredient: 'Cinnamon',
-          prices: [
-            {size: 'Regular', price: '550.00', currency: 'LKR'},
-            {size: 'Large', price: '750.00', currency: 'LKR'},
-          ],
-          average_rating: 4.7,
-          ratings_count: '5,800',
-          favourite: false,
-          type: 'Meal',
-          index: 3,
-        },
+        //   {
+        //     id: 'K4',
+        //     name: 'Cheese Kottu',
+        //     description:
+        //       'A creamy blend of roti, cheese, vegetables, and a variety of spices for a unique flavor.',
+        //     roasted: 'Pan Cooked',
+        //     imagelink_square:
+        //       '../assets/meals_assets/kottu/square/cheese_kottu_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/kottu/portrait/cheese_kottu_pic_1_portrait.png',
+        //     ingredients: 'Roti, Cheese, Vegetables',
+        //     special_ingredient: 'Cheddar Cheese',
+        //     prices: [
+        //       {size: 'Regular', price: '550.00', currency: 'LKR'},
+        //       {size: 'Large', price: '750.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.6,
+        //     ratings_count: '5,900',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 3,
+        //   },
+        // ],
+        // Soups: [
+        //   {
+        //     id: 'S1',
+        //     name: 'Tom Yum Soup',
+        //     description:
+        //       'A hot and sour Thai soup made with fragrant herbs, shrimp, and vegetables.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/soup/square/tom_yum_soup_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/soup/portrait/tom_yum_soup_pic_1_portrait.png',
+        //     ingredients: 'Shrimp, Lemongrass, Chili',
+        //     special_ingredient: 'Galangal',
+        //     prices: [{size: 'Regular', price: '350.00', currency: 'LKR'}],
+        //     average_rating: 4.9,
+        //     ratings_count: '3,450',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 0,
+        //   },
+        //   {
+        //     id: 'S2',
+        //     name: 'Chicken Corn Soup',
+        //     description:
+        //       'A light soup made with chicken, sweet corn, and flavorful broth.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/soup/square/chicken_corn_soup_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/soup/portrait/chicken_corn_soup_pic_1_portrait.png',
+        //     ingredients: 'Chicken, Corn, Broth',
+        //     special_ingredient: 'Ginger',
+        //     prices: [{size: 'Regular', price: '300.00', currency: 'LKR'}],
+        //     average_rating: 4.8,
+        //     ratings_count: '2,930',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 1,
+        //   },
+        //   {
+        //     id: 'S3',
+        //     name: 'Vegetable Soup',
+        //     description:
+        //       'A warm, hearty soup made with mixed vegetables and flavorful broth.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/soup/square/veg_soup_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/soup/portrait/veg_soup_pic_1_portrait.png',
+        //     ingredients: 'Carrots, Potatoes, Broth',
+        //     special_ingredient: 'Coriander',
+        //     prices: [{size: 'Regular', price: '250.00', currency: 'LKR'}],
+        //     average_rating: 4.5,
+        //     ratings_count: '1,870',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 2,
+        //   },
+        //   {
+        //     id: 'S4',
+        //     name: 'Cream of Mushroom Soup',
+        //     description:
+        //       'A rich, creamy soup made with fresh mushrooms and herbs.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/soup/square/cream_of_mushroom_soup_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/soup/portrait/cream_of_mushroom_soup_pic_1_portrait.png',
+        //     ingredients: 'Mushrooms, Cream, Herbs',
+        //     special_ingredient: 'Thyme',
+        //     prices: [{size: 'Regular', price: '380.00', currency: 'LKR'}],
+        //     average_rating: 4.7,
+        //     ratings_count: '3,300',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 3,
+        //   },
+        // ],
+        // 'Noodles & Mee Goreng': [
+        //   {
+        //     id: 'N1',
+        //     name: 'Chicken Mee Goreng',
+        //     description:
+        //       'A spicy, flavorful Indonesian noodle dish stir-fried with chicken, vegetables, and a mix of sauces.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/noodles/square/chicken_mee_goreng_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/noodles/portrait/chicken_mee_goreng_pic_1_portrait.png',
+        //     ingredients: 'Noodles, Chicken, Vegetables',
+        //     special_ingredient: 'Sweet Soy Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '450.00', currency: 'LKR'},
+        //       {size: 'Large', price: '650.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.7,
+        //     ratings_count: '5,320',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 0,
+        //   },
+        //   {
+        //     id: 'N2',
+        //     name: 'Seafood Mee Goreng',
+        //     description:
+        //       'Indonesian-style stir-fried noodles with mixed seafood, vegetables, and flavorful sauces.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/noodles/square/seafood_mee_goreng_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/noodles/portrait/seafood_mee_goreng_pic_1_portrait.png',
+        //     ingredients: 'Noodles, Seafood, Vegetables',
+        //     special_ingredient: 'Chili Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '550.00', currency: 'LKR'},
+        //       {size: 'Large', price: '750.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.8,
+        //     ratings_count: '4,700',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 1,
+        //   },
+        //   {
+        //     id: 'N3',
+        //     name: 'Vegetable Mee Goreng',
+        //     description:
+        //       'A vegetarian version of Mee Goreng with stir-fried noodles, vegetables, and Indonesian spices.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/noodles/square/veg_mee_goreng_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/noodles/portrait/veg_mee_goreng_pic_1_portrait.png',
+        //     ingredients: 'Noodles, Vegetables',
+        //     special_ingredient: 'Sweet Soy Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '400.00', currency: 'LKR'},
+        //       {size: 'Large', price: '600.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.6,
+        //     ratings_count: '3,950',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 2,
+        //   },
+        //   {
+        //     id: 'N4',
+        //     name: 'Beef Mee Goreng',
+        //     description:
+        //       'Stir-fried Indonesian-style noodles with beef, vegetables, and a mix of sweet and spicy sauces.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/noodles/square/beef_mee_goreng_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/noodles/portrait/beef_mee_goreng_pic_1_portrait.png',
+        //     ingredients: 'Noodles, Beef, Vegetables',
+        //     special_ingredient: 'Chili Paste',
+        //     prices: [
+        //       {size: 'Regular', price: '500.00', currency: 'LKR'},
+        //       {size: 'Large', price: '700.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.7,
+        //     ratings_count: '4,300',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 3,
+        //   },
+        // ],
+        // 'Fried Rice': [
+        //   {
+        //     id: 'F1',
+        //     name: 'Chicken Fried Rice',
+        //     description:
+        //       'Fluffy rice stir-fried with chicken, eggs, and vegetables, seasoned with soy sauce and spices.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/fried_rice/square/chicken_fried_rice_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/fried_rice/portrait/chicken_fried_rice_pic_1_portrait.png',
+        //     ingredients: 'Rice, Chicken, Eggs, Vegetables',
+        //     special_ingredient: 'Soy Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '450.00', currency: 'LKR'},
+        //       {size: 'Large', price: '650.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.8,
+        //     ratings_count: '6,210',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 0,
+        //   },
+        //   {
+        //     id: 'F2',
+        //     name: 'Seafood Fried Rice',
+        //     description:
+        //       'Rice stir-fried with mixed seafood, vegetables, and a combination of spices and sauces.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/fried_rice/square/seafood_fried_rice_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/fried_rice/portrait/seafood_fried_rice_pic_1_portrait.png',
+        //     ingredients: 'Rice, Seafood, Vegetables',
+        //     special_ingredient: 'Oyster Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '550.00', currency: 'LKR'},
+        //       {size: 'Large', price: '750.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.7,
+        //     ratings_count: '5,710',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 1,
+        //   },
+        //   {
+        //     id: 'F3',
+        //     name: 'Vegetable Fried Rice',
+        //     description:
+        //       'Rice stir-fried with mixed vegetables, soy sauce, and spices for a flavorful vegetarian option.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/fried_rice/square/veg_fried_rice_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/fried_rice/portrait/veg_fried_rice_pic_1_portrait.png',
+        //     ingredients: 'Rice, Vegetables',
+        //     special_ingredient: 'Soy Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '400.00', currency: 'LKR'},
+        //       {size: 'Large', price: '600.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.5,
+        //     ratings_count: '4,800',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 2,
+        //   },
+        //   {
+        //     id: 'F4',
+        //     name: 'Egg Fried Rice',
+        //     description:
+        //       'Classic fried rice made with eggs, vegetables, and soy sauce, providing a simple yet tasty dish.',
+        //     roasted: 'Stir-fried',
+        //     imagelink_square:
+        //       '../assets/meals_assets/fried_rice/square/egg_fried_rice_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/fried_rice/portrait/egg_fried_rice_pic_1_portrait.png',
+        //     ingredients: 'Rice, Eggs, Vegetables',
+        //     special_ingredient: 'Soy Sauce',
+        //     prices: [
+        //       {size: 'Regular', price: '350.00', currency: 'LKR'},
+        //       {size: 'Large', price: '550.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.6,
+        //     ratings_count: '3,710',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 3,
+        //   },
+        // ],
+        // 'Rice & Curry': [
+        //   {
+        //     id: 'RC1',
+        //     name: 'Chicken Rice & Curry',
+        //     description:
+        //       'Steamed rice served with a spicy chicken curry and a selection of vegetable sides.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/rice_curry/square/chicken_rice_curry_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/rice_curry/portrait/chicken_rice_curry_pic_1_portrait.png',
+        //     ingredients: 'Rice, Chicken, Spices, Vegetables',
+        //     special_ingredient: 'Curry Leaves',
+        //     prices: [
+        //       {size: 'Regular', price: '500.00', currency: 'LKR'},
+        //       {size: 'Large', price: '700.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.7,
+        //     ratings_count: '6,100',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 0,
+        //   },
+        //   {
+        //     id: 'RC2',
+        //     name: 'Fish Rice & Curry',
+        //     description:
+        //       'Steamed rice served with a flavorful fish curry, complemented with vegetable side dishes.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/rice_curry/square/fish_rice_curry_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/rice_curry/portrait/fish_rice_curry_pic_1_portrait.png',
+        //     ingredients: 'Rice, Fish, Spices, Vegetables',
+        //     special_ingredient: 'Fenugreek',
+        //     prices: [
+        //       {size: 'Regular', price: '600.00', currency: 'LKR'},
+        //       {size: 'Large', price: '800.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.6,
+        //     ratings_count: '5,200',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 1,
+        //   },
+        //   {
+        //     id: 'RC3',
+        //     name: 'Vegetable Rice & Curry',
+        //     description:
+        //       'Steamed rice served with a variety of vegetable curries and side dishes.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/rice_curry/square/veg_rice_curry_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/rice_curry/portrait/veg_rice_curry_pic_1_portrait.png',
+        //     ingredients: 'Rice, Vegetables, Spices',
+        //     special_ingredient: 'Coconut Milk',
+        //     prices: [
+        //       {size: 'Regular', price: '450.00', currency: 'LKR'},
+        //       {size: 'Large', price: '650.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.5,
+        //     ratings_count: '4,900',
+        //     favourite: true,
+        //     type: 'Meal',
+        //     index: 2,
+        //   },
+        //   {
+        //     id: 'RC4',
+        //     name: 'Beef Rice & Curry',
+        //     description:
+        //       'Steamed rice served with a tender beef curry and a variety of vegetable side dishes.',
+        //     roasted: 'Simmered',
+        //     imagelink_square:
+        //       '../assets/meals_assets/rice_curry/square/beef_rice_curry_pic_1_square.png',
+        //     imagelink_portrait:
+        //       '../assets/meals_assets/rice_curry/portrait/beef_rice_curry_pic_1_portrait.png',
+        //     ingredients: 'Rice, Beef, Spices, Vegetables',
+        //     special_ingredient: 'Cinnamon',
+        //     prices: [
+        //       {size: 'Regular', price: '550.00', currency: 'LKR'},
+        //       {size: 'Large', price: '750.00', currency: 'LKR'},
+        //     ],
+        //     average_rating: 4.7,
+        //     ratings_count: '5,800',
+        //     favourite: false,
+        //     type: 'Meal',
+        //     index: 3,
+        //   },
       ],
     },
   },
