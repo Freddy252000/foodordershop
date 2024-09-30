@@ -16,6 +16,8 @@ import {
   SPACING,
 } from '../theme/theme';
 import CustomIcon from './CustomIcon';
+import normalize from '../utils/utils';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 interface ImageBackgroundInfoProps {
   EnableBackHandler: boolean;
@@ -106,30 +108,25 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
               </View>
               <View style={styles.ItemPropertiesContainer}>
                 <View style={styles.ProperFirst}>
-                  <CustomIcon
+                  {/* <CustomIcon
                     name={type == 'Bean' ? 'bean' : 'beans'}
-                    size={type == 'Bean' ? FONTSIZE.size_18 : FONTSIZE.size_24}
+                    size={type == 'Bean' ? FONTSIZE.size_18 : FONTSIZE.size_30}
                     color={COLORS.primaryOrangeHex}
-                  />
+                  /> */}
+                  <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
                   <Text
-                    style={[
-                      styles.PropertyTextFirst,
-                      {
-                        marginTop:
-                          type == 'Bean'
-                            ? SPACING.space_4 + SPACING.space_2
-                            : 0,
-                      },
-                    ]}>
+                    style={
+                      styles.PropertyTextFirst}>
                     {type}
                   </Text>
                 </View>
                 <View style={styles.ProperFirst}>
-                  <CustomIcon
+                  {/* <CustomIcon
                     name={type == 'Bean' ? 'location' : 'drop'}
-                    size={FONTSIZE.size_16}
+                    size={FONTSIZE.size_20}
                     color={COLORS.primaryOrangeHex}
-                  />
+                  /> */}
+                  <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} style={{ marginTop: normalize(25), marginBottom: normalize(5) }} />
                   <Text style={styles.PropertyTextLast}>{ingredients}</Text>
                 </View>
               </View>
@@ -191,7 +188,7 @@ const styles = StyleSheet.create({
   },
   ItemTitleText: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_24,
+    fontSize: normalize(20),
     color: COLORS.primaryWhiteHex,
   },
   ItemSubtitleText: {
@@ -202,30 +199,33 @@ const styles = StyleSheet.create({
   ItemPropertiesContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: SPACING.space_20,
+
   },
   ProperFirst: {
-    height: 55,
-    width: 55,
-    borderRadius: BORDERRADIUS.radius_15,
+    height: normalize(120),
+    width: normalize(80),
+    marginLeft: normalize(10),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.primaryBlackHex,
+    borderRadius: normalize(20),
   },
+
   PropertyTextFirst: {
     fontFamily: FONTFAMILY.poppins_medium,
-    fontSize: FONTSIZE.size_10,
+    fontSize: normalize(10),
+    marginTop: normalize(10),
     color: COLORS.primaryWhiteHex,
   },
   PropertyTextLast: {
     fontFamily: FONTFAMILY.poppins_medium,
-    fontSize: FONTSIZE.size_10,
+    fontSize: normalize(10),
+    marginTop: normalize(5),
     color: COLORS.primaryWhiteHex,
-    marginTop: SPACING.space_2 + SPACING.space_4,
   },
   RatingContainer: {
     flexDirection: 'row',
-    gap: SPACING.space_10,
+    gap: normalize(10),
     alignItems: 'center',
   },
   RatingText: {
@@ -235,16 +235,18 @@ const styles = StyleSheet.create({
   },
   RatingCountText: {
     fontFamily: FONTFAMILY.poppins_regular,
-    fontSize: FONTSIZE.size_12,
+    fontSize: normalize(8),
     color: COLORS.primaryWhiteHex,
+
   },
   RoastedContainer: {
-    height: 55,
-    width: 55 * 2 + SPACING.space_20,
-    borderRadius: BORDERRADIUS.radius_15,
+    height: normalize(50),
+    width: normalize(100),
+    borderRadius: normalize(12),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.primaryBlackHex,
+    marginLeft: normalize(155)
   },
   RoastedText: {
     fontFamily: FONTFAMILY.poppins_regular,

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import {
   BORDERRADIUS,
@@ -29,7 +29,7 @@ const PaymentFooter: React.FC<PaymentFooterProps> = ({
       <View style={styles.PriceContainer}>
         <Text style={styles.PriceTitle}>Price</Text>
         <Text style={styles.PriceText}>
-          {price.currency} <Text style={styles.Price}>{price.price}</Text>
+          {price?.currency} <Text style={styles.Price}>{price?.price}</Text>
         </Text>
       </View>
       <TouchableOpacity
