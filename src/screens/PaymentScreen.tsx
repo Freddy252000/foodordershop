@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,6 +6,7 @@ import {
   StatusBar,
   ScrollView,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import {
   BORDERRADIUS,
@@ -14,43 +15,52 @@ import {
   FONTSIZE,
   SPACING,
 } from '../theme/theme';
+import CreditCard from 'react-native-credit-card';
 import GradientBGIcon from '../components/GradientBGIcon';
 import PaymentMethod from '../components/PaymentMethod';
 import PaymentFooter from '../components/PaymentFooter';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomIcon from '../components/CustomIcon';
-import {useStore} from '../store/store';
+import { useStore } from '../store/store';
 import PopUpAnimation from '../components/PopUpAnimation';
+import normalize from '../utils/utils';
 
 const PaymentList = [
-  {
-    name: 'Wallet',
-    icon: 'icon',
-    isIcon: true,
-  },
-  {
-    name: 'Google Pay',
-    icon: require('../assets/app_images/gpay.png'),
-    isIcon: false,
-  },
-  {
-    name: 'Apple Pay',
-    icon: require('../assets/app_images/applepay.png'),
-    isIcon: false,
-  },
-  {
-    name: 'Amazon Pay',
-    icon: require('../assets/app_images/amazonpay.png'),
-    isIcon: false,
-  },
+  // {
+  //   name: 'Wallet',
+  //   icon: 'icon',
+  //   isIcon: true,
+  // },
+  // {
+  //   name: 'Google Pay',
+  //   icon: require('../assets/app_images/gpay.png'),
+  //   isIcon: false,
+  // },
+  // {
+  //   name: 'Apple Pay',
+  //   icon: require('../assets/app_images/applepay.png'),
+  //   isIcon: false,
+  // },
+  // {
+  //   name: 'Amazon Pay',
+  //   icon: require('../assets/app_images/amazonpay.png'),
+  //   isIcon: false,
+  // },
 ];
 
-const PaymentScreen = ({navigation, route}: any) => {
+const PaymentScreen = ({ navigation, route }: any) => {
   const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
   const addToOrderHistoryListFromCart = useStore(
     (state: any) => state.addToOrderHistoryListFromCart,
   );
-
+  const [cardDetails, setCardDetails] = useState({
+    number: '',
+    name: '',
+    expiry: '',
+    cvc: '',
+    focused: '',
+    type: '',
+  });
   const [paymentMode, setPaymentMode] = useState('Credit Card');
   const [showAnimation, setShowAnimation] = useState(false);
 
@@ -62,6 +72,14 @@ const PaymentScreen = ({navigation, route}: any) => {
       setShowAnimation(false);
       navigation.navigate('History');
     }, 2000);
+  };
+
+  const handleInputFocus = (field: string) => {
+    setCardDetails({ ...cardDetails, focused: field });
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setCardDetails({ ...cardDetails, [field]: value });
   };
 
   return (
@@ -112,9 +130,9 @@ const PaymentScreen = ({navigation, route}: any) => {
               ]}>
               <Text style={styles.CreditCardTitle}>Credit Card</Text>
               <View style={styles.CreditCardBG}>
-                <LinearGradient
-                  start={{x: 0, y: 0}}
-                  end={{x: 1, y: 1}}
+                {/* <LinearGradient
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
                   style={styles.LinearGradientStyle}
                   colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}>
                   <View style={styles.CreditCardRow}>
@@ -141,7 +159,7 @@ const PaymentScreen = ({navigation, route}: any) => {
                         Card Holder Name
                       </Text>
                       <Text style={styles.CreditCardNameTitle}>
-                        Robert Evans
+                        Freddy Vincent
                       </Text>
                     </View>
                     <View style={styles.CreditCardDateContainer}>
@@ -151,11 +169,63 @@ const PaymentScreen = ({navigation, route}: any) => {
                       <Text style={styles.CreditCardNameTitle}>02/30</Text>
                     </View>
                   </View>
-                </LinearGradient>
+                </LinearGradient> */}
+
+
+                <CreditCard
+                  type={cardDetails.type}
+                  imageFront={require('../assets/Cart/card-front01.png')}
+                  imageBack={require('../assets/Cart/card-back01.png')}
+                  shiny={false}
+                  bar={false}
+                  focused={cardDetails.focused}
+                  number={cardDetails.number}
+                  name={cardDetails.name}
+                  expiry={cardDetails.expiry}
+                  cvc={cardDetails.cvc}
+                />
               </View>
+
+              {/* Input Fields */}
+              <View style={styles.InputContainer}>
+                <TextInput
+                  style={styles.TextInput}
+                  placeholder="Card Number"
+                  value={cardDetails.number}
+                  onChangeText={(value) => handleInputChange('number', value)}
+                  onFocus={() => handleInputFocus('number')}
+                  keyboardType="numeric"
+                />
+                <TextInput
+                  style={styles.TextInput}
+                  placeholder="Cardholder Name"
+                  value={cardDetails.name}
+                  onChangeText={(value) => handleInputChange('name', value)}
+                  onFocus={() => handleInputFocus('name')}
+                />
+                <TextInput
+                  style={styles.TextInput}
+                  placeholder="Expiry Date (MM/YY)"
+                  value={cardDetails.expiry}
+                  onChangeText={(value) => handleInputChange('expiry', value)}
+                  onFocus={() => handleInputFocus('expiry')}
+                  keyboardType="numeric"
+                />
+                <TextInput
+                  style={styles.TextInput}
+                  placeholder="CVC"
+                  value={cardDetails.cvc}
+                  onChangeText={(value) => handleInputChange('cvc', value)}
+                  onFocus={() => handleInputFocus('cvc')}
+                  keyboardType="numeric"
+                  secureTextEntry={true}
+                />
+              </View>
+
+
             </View>
           </TouchableOpacity>
-          {PaymentList.map((data: any) => (
+          {/* {PaymentList.map((data: any) => (
             <TouchableOpacity
               key={data.name}
               onPress={() => {
@@ -168,13 +238,13 @@ const PaymentScreen = ({navigation, route}: any) => {
                 isIcon={data.isIcon}
               />
             </TouchableOpacity>
-          ))}
+          ))} */}
         </View>
       </ScrollView>
 
       <PaymentFooter
         buttonTitle={`Pay with ${paymentMode}`}
-        price={{price: route.params.amount, currency: '$'}}
+        price={{ price: route.params.amount, currency: 'LKR' }}
         buttonPressHandler={buttonPressHandler}
       />
     </View>
@@ -218,6 +288,19 @@ const styles = StyleSheet.create({
     borderRadius: BORDERRADIUS.radius_15 * 2,
     borderWidth: 3,
   },
+
+  InputContainer: {
+    padding: SPACING.space_15,
+  },
+  TextInput: {
+    borderColor: COLORS.primaryLightGreyHex,
+    borderWidth: 1,
+    borderRadius: BORDERRADIUS.radius_10,
+    padding: SPACING.space_10,
+    marginVertical: SPACING.space_10,
+    color: COLORS.primaryWhiteHex,
+    fontFamily: FONTFAMILY.poppins_regular,
+  },
   CreditCardTitle: {
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_14,
@@ -225,8 +308,13 @@ const styles = StyleSheet.create({
     marginLeft: SPACING.space_10,
   },
   CreditCardBG: {
+    alignSelf: 'center',
+    justifyContent: 'center',
     backgroundColor: COLORS.primaryGreyHex,
-    borderRadius: BORDERRADIUS.radius_25,
+    borderRadius: normalize(20),
+    padding: SPACING.space_10,
+    width: '90%'
+
   },
   LinearGradientStyle: {
     borderRadius: BORDERRADIUS.radius_25,
@@ -268,4 +356,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PaymentScreen;
+export default PaymentScreen; 

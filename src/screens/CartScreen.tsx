@@ -17,6 +17,8 @@ import CartItem from '../components/CartItem';
 
 const CartScreen = ({ navigation, route }: any) => {
   const CartList = useStore((state: any) => state.CartList);
+  console.log('CartList:----', CartList);
+
   const CartPrice = useStore((state: any) => state.CartPrice);
   const incrementCartItemQuantity = useStore(
     (state: any) => state.incrementCartItemQuantity,
@@ -60,7 +62,7 @@ const CartScreen = ({ navigation, route }: any) => {
                   <TouchableOpacity
                     onPress={() => {
                       navigation.push('Details', {
-                        index: data.index,
+                        // index: data.index,
                         id: data.id,
                         type: data.type,
                       });
@@ -91,7 +93,7 @@ const CartScreen = ({ navigation, route }: any) => {
             <PaymentFooter
               buttonPressHandler={buttonPressHandler}
               buttonTitle="Pay"
-              price={{ price: CartPrice, currency: '$' }}
+              price={{ price: CartPrice, currency: 'LKR' }}
             />
           ) : (
             <></>

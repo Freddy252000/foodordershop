@@ -6,8 +6,9 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/theme';
+import { COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import OrderItemCard from './OrderItemCard';
+import normalize from '../utils/utils';
 interface OrderHistoryCardProps {
   navigationHandler: any;
   CartList: any;
@@ -29,29 +30,19 @@ const OrderHistoryCard: React.FC<OrderHistoryCardProps> = ({
         </View>
         <View style={styles.PriceContainer}>
           <Text style={styles.HeaderTitle}>Total Amount</Text>
-          <Text style={styles.HeaderPrice}>$ {CartListPrice}</Text>
+          <Text style={styles.HeaderPrice}>LKR {CartListPrice}</Text>
         </View>
       </View>
       <View style={styles.ListContainer}>
         {CartList.map((data: any, index: any) => (
-          <TouchableOpacity
-            key={index.toString() + data.id}
-            onPress={() => {
-              navigationHandler({
-                index: data.index,
-                id: data.id,
-                type: data.type,
-              });
-            }}>
-            <OrderItemCard
-              type={data.type}
-              name={data.name}
-              imagelink_square={data.imagelink_square}
-              special_ingredient={data.special_ingredient}
-              prices={data.prices}
-              ItemPrice={data.ItemPrice}
-            />
-          </TouchableOpacity>
+          <OrderItemCard
+            type={data.type}
+            name={data.name}
+            imagelink_square={data.imagelink_square}
+            special_ingredient={data.special_ingredient}
+            prices={data.prices}
+            ItemPrice={data.ItemPrice}
+          />
         ))}
       </View>
     </View>
@@ -60,22 +51,28 @@ const OrderHistoryCard: React.FC<OrderHistoryCardProps> = ({
 
 const styles = StyleSheet.create({
   CardContainer: {
-    gap: SPACING.space_10,
+    gap: normalize(15),
+    backgroundColor: COLORS.secondaryBlackRGBA,
+    width: '100%',
+    padding: normalize(10),
+    borderRadius: normalize(10),
+    borderColor: COLORS.primaryWhiteHex,
+    borderWidth: normalize(1)
+
   },
   CardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: SPACING.space_20,
     alignItems: 'center',
   },
   HeaderTitle: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_16,
+    fontSize: normalize(12),
     color: COLORS.primaryWhiteHex,
   },
   HeaderSubtitle: {
     fontFamily: FONTFAMILY.poppins_light,
-    fontSize: FONTSIZE.size_16,
+    fontSize: normalize(8),
     color: COLORS.primaryWhiteHex,
   },
   PriceContainer: {
@@ -83,11 +80,11 @@ const styles = StyleSheet.create({
   },
   HeaderPrice: {
     fontFamily: FONTFAMILY.poppins_medium,
-    fontSize: FONTSIZE.size_18,
+    fontSize: normalize(13),
     color: COLORS.primaryOrangeHex,
   },
   ListContainer: {
-    gap: SPACING.space_20,
+    gap: normalize(20),
   },
 });
 

@@ -16,6 +16,7 @@ import {
   SPACING,
 } from '../theme/theme';
 import CustomIcon from './CustomIcon';
+import normalize from '../utils/utils';
 
 interface CartItemProps {
   id: string;
@@ -40,12 +41,14 @@ const CartItem: React.FC<CartItemProps> = ({
   incrementCartItemQuantityHandler,
   decrementCartItemQuantityHandler,
 }) => {
+  console.log('prices:----', prices);
+
   return (
     <View>
       {prices.length != 1 ? (
         <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 1}}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
           colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
           style={styles.CartItemLinearGradient}>
           <View style={styles.CartItemRow}>
@@ -73,7 +76,7 @@ const CartItem: React.FC<CartItemProps> = ({
                       styles.SizeText,
                       {
                         fontSize:
-                          type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                          type == 'Shorteats' ? normalize(10) : normalize(10),
                       },
                     ]}>
                     {data.size}
@@ -118,8 +121,8 @@ const CartItem: React.FC<CartItemProps> = ({
         </LinearGradient>
       ) : (
         <LinearGradient
-          start={{x: 0, y: 0}}
-          end={{x: 1, y: 1}}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
           colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
           style={styles.CartItemSingleLinearGradient}>
           <View>
@@ -140,7 +143,7 @@ const CartItem: React.FC<CartItemProps> = ({
                     styles.SizeText,
                     {
                       fontSize:
-                        type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                        type == 'Shorteats' ? normalize(10) : normalize(10),
                     },
                   ]}>
                   {prices[0].size}
@@ -196,7 +199,7 @@ const styles = StyleSheet.create({
   },
   CartItemRow: {
     flexDirection: 'row',
-    gap: SPACING.space_12,
+    gap: normalize(12),
     flex: 1,
   },
   CartItemImage: {
@@ -235,7 +238,7 @@ const styles = StyleSheet.create({
   CartItemSizeRowContainer: {
     flex: 1,
     alignItems: 'center',
-    gap: SPACING.space_20,
+    gap: normalize(40),
     flexDirection: 'row',
     justifyContent: 'center',
   },
@@ -247,9 +250,9 @@ const styles = StyleSheet.create({
   },
   SizeBox: {
     backgroundColor: COLORS.primaryBlackHex,
-    height: 40,
-    width: 100,
-    borderRadius: BORDERRADIUS.radius_10,
+    height: normalize(30),
+    width: normalize(60),
+    borderRadius: normalize(10),
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -259,7 +262,8 @@ const styles = StyleSheet.create({
   },
   SizeCurrency: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_18,
+    fontSize: normalize(12),
+    marginLeft: normalize(8),
     color: COLORS.primaryOrangeHex,
   },
   SizePrice: {

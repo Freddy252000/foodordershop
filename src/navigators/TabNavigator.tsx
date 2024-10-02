@@ -8,6 +8,9 @@ import FavoritesScreen from '../screens/FavoritesScreen';
 import CartScreen from '../screens/CartScreen';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import CustomIcon from '../components/CustomIcon';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import normalize from '../utils/utils';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +39,7 @@ const TabNavigator = () => {
               name="home"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -50,7 +53,7 @@ const TabNavigator = () => {
               name="cart"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
 
             />
@@ -65,7 +68,7 @@ const TabNavigator = () => {
               name="like"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
           ),
@@ -79,9 +82,22 @@ const TabNavigator = () => {
               name="bell"
               size={25}
               color={
-                focused ? COLORS.primaryOrangeHex : COLORS.primaryLightGreyHex
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
               }
             />
+          ),
+        }}></Tab.Screen>
+
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            <Ionicons name="person" size={normalize(20)}
+              color={
+                focused ? COLORS.primaryOrangeHex : COLORS.primaryWhiteHex
+              } />
+
           ),
         }}></Tab.Screen>
     </Tab.Navigator>

@@ -23,7 +23,7 @@ const CARD_WIDTH = Dimensions.get('window').width * 0.32;
 
 interface MealsCardProps {
     id: string;
-    index: number;
+
     type: string;
     roasted: string;
     imagelink_square: ImageProps;
@@ -36,7 +36,7 @@ interface MealsCardProps {
 
 const MealsCard: React.FC<MealsCardProps> = ({
     id,
-    index,
+
     type,
     roasted,
     imagelink_square,
@@ -69,13 +69,13 @@ const MealsCard: React.FC<MealsCardProps> = ({
             <Text style={styles.CardSubtitle}>{special_ingredient}</Text>
             <View style={styles.CardFooterRow}>
                 <Text style={styles.CardPriceCurrency}>
-                    $ <Text style={styles.CardPrice}>{price.price}</Text>
+                    LKR <Text style={styles.CardPrice}>{price.price}</Text>
                 </Text>
                 <TouchableOpacity
                     onPress={() => {
                         buttonPressHandler({
                             id,
-                            index,
+
                             type,
                             roasted,
                             imagelink_square,

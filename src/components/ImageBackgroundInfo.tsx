@@ -106,30 +106,20 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                   {special_ingredient}
                 </Text>
               </View>
-              <View style={styles.ItemPropertiesContainer}>
-                <View style={styles.ProperFirst}>
-                  {/* <CustomIcon
-                    name={type == 'Bean' ? 'bean' : 'beans'}
-                    size={type == 'Bean' ? FONTSIZE.size_18 : FONTSIZE.size_30}
-                    color={COLORS.primaryOrangeHex}
-                  /> */}
-                  <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
-                  <Text
-                    style={
-                      styles.PropertyTextFirst}>
-                    {type}
-                  </Text>
-                </View>
-                <View style={styles.ProperFirst}>
-                  {/* <CustomIcon
-                    name={type == 'Bean' ? 'location' : 'drop'}
-                    size={FONTSIZE.size_20}
-                    color={COLORS.primaryOrangeHex}
-                  /> */}
-                  <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} style={{ marginTop: normalize(25), marginBottom: normalize(5) }} />
-                  <Text style={styles.PropertyTextLast}>{ingredients}</Text>
-                </View>
+
+              <View style={styles.ProperFirst}>
+                <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
+                <Text
+                  style={
+                    styles.PropertyTextFirst}>
+                  {type}
+                </Text>
               </View>
+              <View style={styles.ProperFirst}>
+                <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
+                <Text style={styles.PropertyTextLast}>{ingredients}</Text>
+              </View>
+
             </View>
             <View style={styles.InfoContainerRow}>
               <View style={styles.RatingContainer}>
@@ -142,6 +132,7 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                 <Text style={styles.RatingCountText}>({ratings_count})</Text>
               </View>
               <View style={styles.RoastedContainer}>
+                <Ionicons name="thumbs-up-sharp" size={normalize(20)} color={COLORS.primaryOrangeHex} />
                 <Text style={styles.RoastedText}>{roasted}</Text>
               </View>
             </View>
@@ -155,8 +146,9 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
 const styles = StyleSheet.create({
   ItemBackgroundImage: {
     width: '100%',
-    aspectRatio: 20 / 25,
+    aspectRatio: 25 / 25,
     justifyContent: 'space-between',
+
   },
   ImageHeaderBarContainerWithBack: {
     padding: SPACING.space_30,
@@ -171,20 +163,19 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   ImageInfoOuterContainer: {
-    paddingVertical: SPACING.space_24,
-    paddingHorizontal: SPACING.space_30,
-    backgroundColor: COLORS.primaryBlackRGBA,
+    paddingVertical: normalize(5),
+    paddingHorizontal: normalize(20),
+    backgroundColor: COLORS.secondaryBlackRGBA,
     borderTopLeftRadius: BORDERRADIUS.radius_20 * 2,
     borderTopRightRadius: BORDERRADIUS.radius_20 * 2,
+    opacity: 1
   },
   ImageInfoInnerContainer: {
     justifyContent: 'space-between',
-    gap: SPACING.space_15,
   },
   InfoContainerRow: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   ItemTitleText: {
     fontFamily: FONTFAMILY.poppins_semibold,
@@ -196,61 +187,56 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_12,
     color: COLORS.primaryWhiteHex,
   },
-  ItemPropertiesContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-
-  },
   ProperFirst: {
-    height: normalize(120),
-    width: normalize(80),
-    marginLeft: normalize(10),
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.primaryBlackHex,
-    borderRadius: normalize(20),
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    marginTop: normalize(10)
   },
 
   PropertyTextFirst: {
     fontFamily: FONTFAMILY.poppins_medium,
     fontSize: normalize(10),
-    marginTop: normalize(10),
+    marginTop: normalize(1),
     color: COLORS.primaryWhiteHex,
   },
   PropertyTextLast: {
     fontFamily: FONTFAMILY.poppins_medium,
     fontSize: normalize(10),
-    marginTop: normalize(5),
     color: COLORS.primaryWhiteHex,
   },
   RatingContainer: {
     flexDirection: 'row',
-    gap: normalize(10),
     alignItems: 'center',
+    gap: normalize(5),
+    marginTop: normalize(5)
   },
   RatingText: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_18,
+    fontSize: normalize(12),
     color: COLORS.primaryWhiteHex,
+    marginTop: normalize(5)
   },
   RatingCountText: {
     fontFamily: FONTFAMILY.poppins_regular,
     fontSize: normalize(8),
     color: COLORS.primaryWhiteHex,
-
+    marginTop: normalize(5)
   },
   RoastedContainer: {
-    height: normalize(50),
+    height: normalize(40),
     width: normalize(100),
-    borderRadius: normalize(12),
+    borderRadius: normalize(10),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.primaryBlackHex,
-    marginLeft: normalize(155)
+    flexDirection: 'row',
+    gap: normalize(10),
+    marginTop: normalize(10)
   },
   RoastedText: {
     fontFamily: FONTFAMILY.poppins_regular,
-    fontSize: FONTSIZE.size_10,
+    fontSize: normalize(8),
     color: COLORS.primaryWhiteHex,
   },
 });

@@ -74,7 +74,7 @@ const CartInfo: React.FC<CartInfoProps> = ({
                                             styles.SizeText,
                                             {
                                                 fontSize:
-                                                    type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                                                    type == 'Shorteats' ? FONTSIZE.size_12 : FONTSIZE.size_16,
                                             },
                                         ]}>
                                         {data.size}
@@ -141,7 +141,7 @@ const CartInfo: React.FC<CartInfoProps> = ({
                                         styles.SizeText,
                                         {
                                             fontSize:
-                                                type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                                                type == 'Shorteats' ? FONTSIZE.size_12 : FONTSIZE.size_16,
                                         },
                                     ]}>
                                     {prices[0].size}

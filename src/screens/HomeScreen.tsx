@@ -10,6 +10,7 @@ import {
   ToastAndroid,
   Modal,
   TouchableWithoutFeedback,
+  Image,
 } from 'react-native';
 import { useStore } from '../store/store';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
@@ -32,6 +33,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import CartItem from '../components/CartItem';
 import CartInfo from '../components/cardinfo';
 import { Actionsheet, Flex, useDisclose } from 'native-base';
+import LinearGradient from 'react-native-linear-gradient';
 
 const getCategoriesFromData = (data: any) => {
   const temp: any = {};
@@ -138,6 +140,8 @@ const HomeScreen = ({ navigation }: any) => {
     type,
     prices,
   }: any) => {
+    console.log({ id });
+
     addToCart({
       id,
       index,
@@ -163,7 +167,46 @@ const HomeScreen = ({ navigation }: any) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}>
         {/* App Header */}
-        <HeaderBar />
+        {/* <HeaderBar /> */}
+        <View style={{
+          padding: normalize(25),
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
+          <View style={{
+            borderWidth: 2,
+            borderColor: COLORS.secondaryDarkGreyHex,
+            borderRadius: SPACING.space_12,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: COLORS.secondaryDarkGreyHex,
+            overflow: 'hidden',
+          }}>
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+              style={{
+                height: SPACING.space_36,
+                width: SPACING.space_36,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              {/* <CustomIcon name={name} color={color} size={size} /> */}
+              <Image
+                source={require('../assets/logo/Free_Logo.png')}
+                style={{
+                  width: '100%',
+                  height: normalize(500),
+                  resizeMode: 'center',
+
+                }}
+                resizeMode="contain"
+              />
+            </LinearGradient>
+          </View>
+        </View>
 
         <View style={styles.ScreenView}>
           <Text style={styles.ScreenTitle}>

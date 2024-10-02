@@ -34,10 +34,10 @@ const DetailsScreen = ({ navigation, route }: any) => {
 
   useEffect(() => {
     const mealCategories: Record<string, string> = {
-      B1: 'Biriyanis',
-      B2: 'Biriyanis',
-      B3: 'Biriyanis',
-      B4: 'Biriyanis',
+      BR1: 'Biriyanis',
+      BR2: 'Biriyanis',
+      BR3: 'Biriyanis',
+      BR4: 'Biriyanis',
       NA1: 'Naans',
       NA2: 'Naans',
       NA3: 'Naans',
@@ -76,83 +76,14 @@ const DetailsScreen = ({ navigation, route }: any) => {
         (meal) => meal.id === route.params.id
       );
     } else {
-      selectedData = BeanList[route.params.index];
+      console.log('BeanList:---', BeanList);
+      selectedData = BeanList.find(item => item.id === route.params.id);
     }
     console.log({ selectedData });
 
     setItemOfIndex(selectedData);
 
   }, [route.params, CoffeeList, MealsList, BeanList]);
-
-
-
-  //   if (route.params.type === 'Coffee') {
-  //     return state.CoffeeList;
-  //   }
-
-  //   if (route.params.type === 'Meal' && mealCategories[route.params.id]) {
-  //     const selectedCategory = mealCategories[route.params.id];
-  //     console.log('state.MealsList[0].categories[selectedCategory]:---', state.MealsList[0].categories[selectedCategory]);
-  //     return state.MealsList[0].categories[selectedCategory];
-  //   }
-
-  //   return state.BeanList;
-  // })[route.params.index];
-
-
-  // const ItemOfIndex = useStore((state: any) => {
-  //   const mealCategories: Record<string, string> = {
-  //     B1: 'Biriyanis',
-  //     B2: 'Biriyanis',
-  //     B3: 'Biriyanis',
-  //     B4: 'Biriyanis',
-  //     NA1: 'Naans',
-  //     NA2: 'Naans',
-  //     NA3: 'Naans',
-  //     K1: 'Kottu',
-  //     K2: 'Kottu',
-  //     K3: 'Kottu',
-  //     K4: 'Kottu',
-  //     S1: 'Soups',
-  //     S2: 'Soups',
-  //     S3: 'Soups',
-  //     S4: 'Soups',
-  //     N1: 'Noodles',
-  //     N2: 'Noodles',
-  //     N3: 'Noodles',
-  //     N4: 'Noodles',
-  //     F1: 'FriedRice',
-  //     F2: 'FriedRice',
-  //     F3: 'FriedRice',
-  //     F4: 'FriedRice',
-  //     RC1: 'RiceandCurry',
-  //     RC2: 'RiceandCurry',
-  //     RC3: 'RiceandCurry',
-  //     RC4: 'RiceandCurry'
-  //   };
-
-  //   if (route.params.type === 'Coffee') {
-  //     return state.CoffeeList;
-  //   }
-
-  //   if (route.params.type === 'Meal' && mealCategories[route.params.id]) {
-  //     const selectedCategory = mealCategories[route.params.id];
-  //     console.log('state.MealsList[0].categories[selectedCategory]:---', state.MealsList[0].categories[selectedCategory]);
-  //     return state.MealsList[0].categories[selectedCategory];
-  //   }
-
-  //   return state.BeanList;
-  // })[route.params.index];
-  // console.log('ItemOfIndex:', ItemOfIndex);
-  // useEffect(() => {
-  //   if (ItemOfIndex) {
-  //     console.log('ItemOfIndex:', ItemOfIndex);
-  //     setLoading(false);
-  //   } else {
-  //     console.log('ItemOfIndex is undefined or empty');
-  //     setLoading(true);
-  //   }
-  // }, [route.params.id]);
 
   const addToFavoriteList = useStore((state: any) => state.addToFavoriteList);
   const deleteFromFavoriteList = useStore(
@@ -161,7 +92,16 @@ const DetailsScreen = ({ navigation, route }: any) => {
   const addToCart = useStore((state: any) => state.addToCart);
   const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
 
-  const [price, setPrice] = useState(ItemOfIndex?.prices?.[0] ?? null);
+  // const [price, setPrice] = useState(ItemOfIndex?.prices?.[0] ?? null);
+
+  const [price, setPrice] = useState<any>(null);
+  useEffect(() => {
+    if (ItemOfIndex?.prices && ItemOfIndex.prices.length > 0) {
+      setPrice(ItemOfIndex.prices[0]);
+    }
+  }, [ItemOfIndex]);
+
+
   const [fullDesc, setFullDesc] = useState(false);
 
   const ToggleFavourite = (favourite: boolean, type: string, id: string) => {
@@ -241,7 +181,7 @@ const DetailsScreen = ({ navigation, route }: any) => {
           )}
           <Text style={styles.InfoTitle}>Size</Text>
           <View style={styles.SizeOuterContainer}>
-            {ItemOfIndex?.prices?.map((data: any) => (
+            {/* {ItemOfIndex?.prices?.map((data: any) => (
               <TouchableOpacity
                 key={data.size}
                 onPress={() => {
@@ -273,7 +213,42 @@ const DetailsScreen = ({ navigation, route }: any) => {
                   {data.size}
                 </Text>
               </TouchableOpacity>
+            ))} */}
+
+            {ItemOfIndex?.prices?.map((data: any, index: number) => (
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  setPrice(data);
+                }}
+                style={[
+                  styles.SizeBox,
+                  {
+                    borderColor:
+                      data.size === price?.size
+                        ? COLORS.primaryOrangeHex
+                        : COLORS.primaryDarkGreyHex,
+                  },
+                ]}>
+                <Text
+                  style={[
+                    styles.SizeText,
+                    {
+                      fontSize:
+                        ItemOfIndex.type === 'Shorteats'
+                          ? FONTSIZE.size_14
+                          : FONTSIZE.size_16,
+                      color:
+                        data.size === price?.size
+                          ? COLORS.primaryOrangeHex
+                          : COLORS.secondaryLightGreyHex,
+                    },
+                  ]}>
+                  {data.size}
+                </Text>
+              </TouchableOpacity>
             ))}
+
           </View>
         </View>
         <PaymentFooter

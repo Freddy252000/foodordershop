@@ -3,7 +3,7 @@ const Mealsdata = [
     categories: {
       Biriyanis: [
         {
-          id: 'B1',
+          id: 'BR1',
           name: 'Chicken Biriyani',
           description:
             'Aromatic basmati rice cooked with tender chicken, Indian spices, and herbs, served with raita and curry.',
@@ -23,7 +23,7 @@ const Mealsdata = [
           index: 0,
         },
         {
-          id: 'B2',
+          id: 'BR2',
           name: 'Mutton Biriyani',
           description:
             'Fragrant basmati rice cooked with succulent mutton pieces, aromatic spices, and served with sides.',
@@ -43,7 +43,7 @@ const Mealsdata = [
           index: 1,
         },
         {
-          id: 'B3',
+          id: 'BR3',
           name: 'Vegetable Biriyani',
           description:
             'Aromatic rice cooked with a variety of fresh vegetables and spices, served with raita and curry.',
@@ -63,7 +63,7 @@ const Mealsdata = [
           index: 2,
         },
         {
-          id: 'B4',
+          id: 'BR4',
           name: 'Prawn Biriyani',
           description:
             'Basmati rice cooked with succulent prawns, spices, and herbs, served with sides.',
