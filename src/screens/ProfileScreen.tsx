@@ -3,7 +3,7 @@ import React from 'react'
 import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import normalize from '../utils/utils';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }: any) => {
 
     return (
         <View style={styles.screenContainer}>
@@ -23,11 +23,10 @@ const ProfileScreen = () => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.editButton} onPress={console.log('preddss01')
-                }>
+                <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('Editprofile')}>
                     <Text style={styles.editButtonText}>Edit Profile</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.logoutButton} onPress={console.log('preddss02')}>
+                <TouchableOpacity style={styles.logoutButton} onPress={() => navigation.navigate('Login')}>
                     <Text style={styles.logoutButtonText}>Logout</Text>
                 </TouchableOpacity>
             </View>

@@ -7,6 +7,7 @@ import {
   FONTSIZE,
   SPACING,
 } from '../theme/theme';
+import normalize from '../utils/utils';
 
 interface PriceProps {
   price: string;
@@ -40,18 +41,17 @@ const PaymentFooter: React.FC<PaymentFooterProps> = ({
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   PriceFooter: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: SPACING.space_20,
-    padding: SPACING.space_20,
+    gap: normalize(10),
+    padding: normalize(12),
   },
   PriceContainer: {
-    alignItems: 'center',
-    width: 100,
+    alignItems: 'flex-start',
+    width: normalize(120),
   },
   PriceTitle: {
     fontFamily: FONTFAMILY.poppins_medium,
@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: SPACING.space_36 * 2,
-    borderRadius: BORDERRADIUS.radius_20,
+    height: normalize(45),
+    borderRadius: normalize(10),
   },
   ButtonText: {
     fontFamily: FONTFAMILY.poppins_semibold,

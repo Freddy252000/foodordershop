@@ -40,7 +40,7 @@ const getCategoriesFromData = (data: any) => {
   for (let i = 0; i < data.length; i++) {
     const categories = Object.keys(data[i].categories);
     for (const category of categories) {
-      temp[category] = true; // Use a set to collect unique categories
+      temp[category] = true;
     }
   }
   let categoriesArray = Object.keys(temp);

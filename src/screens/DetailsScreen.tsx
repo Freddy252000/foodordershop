@@ -181,40 +181,6 @@ const DetailsScreen = ({ navigation, route }: any) => {
           )}
           <Text style={styles.InfoTitle}>Size</Text>
           <View style={styles.SizeOuterContainer}>
-            {/* {ItemOfIndex?.prices?.map((data: any) => (
-              <TouchableOpacity
-                key={data.size}
-                onPress={() => {
-                  setPrice(data);
-                }}
-                style={[
-                  styles.SizeBox,
-                  {
-                    borderColor:
-                      data.size == price?.size
-                        ? COLORS.primaryOrangeHex
-                        : COLORS.primaryDarkGreyHex,
-                  },
-                ]}>
-                <Text
-                  style={[
-                    styles.SizeText,
-                    {
-                      fontSize:
-                        ItemOfIndex.type == 'Shorteats'
-                          ? FONTSIZE.size_14
-                          : FONTSIZE.size_16,
-                      color:
-                        data.size == price?.size
-                          ? COLORS.primaryOrangeHex
-                          : COLORS.secondaryLightGreyHex,
-                    },
-                  ]}>
-                  {data.size}
-                </Text>
-              </TouchableOpacity>
-            ))} */}
-
             {ItemOfIndex?.prices?.map((data: any, index: number) => (
               <TouchableOpacity
                 key={index}
@@ -282,26 +248,28 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   FooterInfoArea: {
-    padding: normalize(20),
+    paddingLeft: normalize(20),
+    paddingTop: normalize(5)
   },
   InfoTitle: {
     fontFamily: FONTFAMILY.poppins_semibold,
     fontSize: FONTSIZE.size_16,
     color: COLORS.primaryWhiteHex,
-    marginBottom: SPACING.space_10,
+    marginBottom: normalize(1),
   },
   DescriptionText: {
     letterSpacing: 0.5,
     fontFamily: FONTFAMILY.poppins_regular,
     fontSize: FONTSIZE.size_14,
     color: COLORS.primaryWhiteHex,
-    marginBottom: SPACING.space_30,
+    marginBottom: normalize(5),
   },
   SizeOuterContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: SPACING.space_20,
+    gap: normalize(10),
+    marginRight: normalize(5)
   },
   SizeBox: {
     flex: 1,
@@ -309,7 +277,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: SPACING.space_24 * 2,
-    borderRadius: BORDERRADIUS.radius_10,
+    borderRadius: normalize(5),
     borderWidth: 2,
   },
   SizeText: {

@@ -6,6 +6,7 @@ import {
   ImageProps,
   TouchableOpacity,
   ImageBackground,
+  Image,
 } from 'react-native';
 import GradientBGIcon from './GradientBGIcon';
 import {
@@ -18,6 +19,7 @@ import {
 import CustomIcon from './CustomIcon';
 import normalize from '../utils/utils';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import LinearGradient from 'react-native-linear-gradient';
 
 interface ImageBackgroundInfoProps {
   EnableBackHandler: boolean;
@@ -52,52 +54,61 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
 }) => {
   return (
     <View>
-      <ImageBackground
-        source={imagelink_portrait}
-        style={styles.ItemBackgroundImage}>
-        {EnableBackHandler ? (
-          <View style={styles.ImageHeaderBarContainerWithBack}>
-            <TouchableOpacity
-              onPress={() => {
-                BackHandler();
-              }}>
-              <GradientBGIcon
-                name="left"
-                color={COLORS.primaryLightGreyHex}
-                size={FONTSIZE.size_16}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                ToggleFavourite(favourite, type, id);
-              }}>
-              <GradientBGIcon
-                name="like"
-                color={
-                  favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex
-                }
-                size={FONTSIZE.size_16}
-              />
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View style={styles.ImageHeaderBarContainerWithoutBack}>
-            <TouchableOpacity
-              onPress={() => {
-                ToggleFavourite(favourite, type, id);
-              }}>
-              <GradientBGIcon
-                name="like"
-                color={
-                  favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex
-                }
-                size={FONTSIZE.size_16}
-              />
-            </TouchableOpacity>
-          </View>
-        )}
+      {EnableBackHandler ? (
+        <View style={styles.ImageHeaderBarContainerWithBack}>
+          <TouchableOpacity
+            onPress={() => {
+              BackHandler();
+            }}>
+            <GradientBGIcon
+              name="left"
+              color={COLORS.primaryLightGreyHex}
+              size={FONTSIZE.size_16}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              ToggleFavourite(favourite, type, id);
+            }}>
+            <GradientBGIcon
+              name="like"
+              color={
+                favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex
+              }
+              size={FONTSIZE.size_16}
+            />
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <View style={styles.ImageHeaderBarContainerWithoutBack}>
+          <TouchableOpacity
+            onPress={() => {
+              ToggleFavourite(favourite, type, id);
+            }}>
+            <GradientBGIcon
+              name="like"
+              color={
+                favourite ? COLORS.primaryRedHex : COLORS.primaryLightGreyHex
+              }
+              size={FONTSIZE.size_16}
+            />
+          </TouchableOpacity>
+        </View>
+      )}
 
+
+      <LinearGradient
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={{
+          borderRadius: normalize(20),
+        }}
+        colors={[COLORS.primaryDarkGreyHex, COLORS.primaryGreyHex]}>
         <View style={styles.ImageInfoOuterContainer}>
+          <Image
+            source={imagelink_portrait}
+            style={styles.ItemBackgroundImage}>
+          </Image>
           <View style={styles.ImageInfoInnerContainer}>
             <View style={styles.InfoContainerRow}>
               <View>
@@ -108,7 +119,7 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
               </View>
 
               <View style={styles.ProperFirst}>
-                <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
+                <Ionicons name="restaurant" size={normalize(15)} color={COLORS.primaryOrangeHex} />
                 <Text
                   style={
                     styles.PropertyTextFirst}>
@@ -116,12 +127,12 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                 </Text>
               </View>
               <View style={styles.ProperFirst}>
-                <Ionicons name="restaurant" size={normalize(20)} color={COLORS.primaryOrangeHex} />
+                <Ionicons name="restaurant" size={normalize(15)} color={COLORS.primaryOrangeHex} />
                 <Text style={styles.PropertyTextLast}>{ingredients}</Text>
               </View>
 
             </View>
-            <View style={styles.InfoContainerRow}>
+            <View style={styles.InfoContainerRow2}>
               <View style={styles.RatingContainer}>
                 <CustomIcon
                   name={'star'}
@@ -132,49 +143,57 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
                 <Text style={styles.RatingCountText}>({ratings_count})</Text>
               </View>
               <View style={styles.RoastedContainer}>
-                <Ionicons name="thumbs-up-sharp" size={normalize(20)} color={COLORS.primaryOrangeHex} />
+                <Ionicons name="thumbs-up-sharp" size={normalize(15)} color={COLORS.primaryOrangeHex} />
                 <Text style={styles.RoastedText}>{roasted}</Text>
               </View>
             </View>
           </View>
         </View>
-      </ImageBackground>
+      </LinearGradient>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   ItemBackgroundImage: {
-    width: '100%',
-    aspectRatio: 25 / 25,
-    justifyContent: 'space-between',
-
+    marginTop: normalize(5),
+    width: '95%',
+    height: normalize(180),
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: normalize(20),
+    borderWidth: normalize(2),
+    borderColor: COLORS.primaryWhiteHex
   },
   ImageHeaderBarContainerWithBack: {
-    padding: SPACING.space_30,
+    padding: normalize(10),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   ImageHeaderBarContainerWithoutBack: {
-    padding: SPACING.space_30,
+    padding: normalize(20),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
   ImageInfoOuterContainer: {
-    paddingVertical: normalize(5),
-    paddingHorizontal: normalize(20),
-    backgroundColor: COLORS.secondaryBlackRGBA,
-    borderTopLeftRadius: BORDERRADIUS.radius_20 * 2,
-    borderTopRightRadius: BORDERRADIUS.radius_20 * 2,
-    opacity: 1
+    // backgroundColor: COLORS.primaryDarkGreyHex,
+    borderRadius: BORDERRADIUS.radius_10 * 2,
+    // opacity: 1,
   },
   ImageInfoInnerContainer: {
+    paddingVertical: normalize(10),
+    paddingHorizontal: normalize(20),
     justifyContent: 'space-between',
   },
   InfoContainerRow: {
     flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+
+  InfoContainerRow2: {
+    flexDirection: 'row',
     justifyContent: 'space-between',
   },
   ItemTitleText: {
@@ -191,7 +210,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    marginTop: normalize(10)
+    marginTop: normalize(10),
+    gap: normalize(5),
   },
 
   PropertyTextFirst: {
@@ -224,19 +244,15 @@ const styles = StyleSheet.create({
     marginTop: normalize(5)
   },
   RoastedContainer: {
-    height: normalize(40),
-    width: normalize(100),
-    borderRadius: normalize(10),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLORS.primaryBlackHex,
     flexDirection: 'row',
     gap: normalize(10),
     marginTop: normalize(10)
   },
   RoastedText: {
-    fontFamily: FONTFAMILY.poppins_regular,
-    fontSize: normalize(8),
+    fontFamily: FONTFAMILY.poppins_bold,
+    fontSize: normalize(9),
     color: COLORS.primaryWhiteHex,
   },
 });

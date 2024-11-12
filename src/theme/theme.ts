@@ -45,21 +45,25 @@ interface Color {
   primaryWhiteHex: string;
   primaryBlackRGBA: string;
   secondaryBlackRGBA: string;
+  primaryBlueHex: string;
+  primaryDarkHex: string;
 }
 
 export const COLORS: Color = {
   primaryRedHex: '#DC3535',
-  primaryOrangeHex: '#D17842',
-  primaryBlackHex: '#0C0F14',
+  primaryOrangeHex: '#CF7500',
+  primaryBlackHex: '#000000',
   primaryDarkGreyHex: '#141921',
   secondaryDarkGreyHex: '#21262E',
-  primaryGreyHex: '#252A32',
+  primaryGreyHex: '#393E46',
   secondaryGreyHex: '#252A32',
-  primaryLightGreyHex: '#52555A',
+  primaryLightGreyHex: '#393E46',
   secondaryLightGreyHex: '#AEAEAE',
-  primaryWhiteHex: '#FFFFFF',
+  primaryWhiteHex: '#EEEEEE',
   primaryBlackRGBA: 'rgba(12,15,20,0.5)',
   secondaryBlackRGBA: 'rgba(0,0,0,0.7)',
+  primaryBlueHex: '#0F00FF',
+  primaryDarkHex: '#03346E',
 };
 
 interface FontFamily {
